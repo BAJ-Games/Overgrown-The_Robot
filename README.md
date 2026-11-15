@@ -10,8 +10,8 @@ We dont't want to say TOO much about the game by now, but it will be great.
 <br>
 
 ***Code***
-- **UI** Benjamin-306
-- **Test game** Benjamin-306
+- **UI** [Benjamin-306](https://github.com/Benjamin-306)
+- **Test game** [Benjamin-306](https://github.com/Benjamin-306)
 - **thanks to:**
   - https://chatgpt.com/
   - https://google.com/ai/
@@ -19,16 +19,16 @@ We dont't want to say TOO much about the game by now, but it will be great.
     **for some help with the more complicated things**
 
 ***PBR Textures and 3D Models***
-  - **Research** Benjamin-306
+  - **Research** [Benjamin-306](https://github.com/Benjamin-306)
   - **thanks to:**
     - https://polyhaven.com/
     - https://www.poliigon.com/
 
 ***UI Images***
-- **Prompt** Benjamin-306
+- **Prompt** [Benjamin-306](https://github.com/Benjamin-306)
 - **thanks to:**
   - https://chatgpt.com/
 
 ***Story***
-- **Main idea** jakobpfaff92-tech
-- **Secondary ideas** Benjamin-306
+- **Main idea** [Jaka](https://github.com/jakobpfaff92-tech)
+- **Secondary ideas** [Benjamin-306](https://github.com/Benjamin-306)
