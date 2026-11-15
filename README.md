@@ -28,3 +28,7 @@ We dont't want to say TOO much about the game by now, but it will be great.
 - **Prompt** Benjamin-306
 - **thanks to:**
   - https://chatgpt.com/
+
+***Story***
+- **Main idea** jakobpfaff92-tech
+- **Secondary ideas** Benjamin-306
