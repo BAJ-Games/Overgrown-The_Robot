@@ -32,3 +32,7 @@ We dont't want to say TOO much about the game by now, but it will be great.
 ***Story***
 - **Main idea** [Jaka](https://github.com/jakobpfaff92-tech)
 - **Secondary ideas** [Benjamin-306](https://github.com/Benjamin-306)
+
+***All contributors***
+- [Benjamin-306](https://github.com/Benjamin-306)
+- [Jaka](https://github.com/jakobpfaff92-tech)
