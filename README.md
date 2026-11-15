@@ -23,3 +23,8 @@ We dont't want to say TOO much about the game by now, but it will be great.
   - **thanks to:**
     - https://polyhaven.com/
     - https://www.poliigon.com/
+
+***UI Images***
+- **Prompt** Benjamin-306
+- **thanks to:**
+  - https://chatgpt.com/
