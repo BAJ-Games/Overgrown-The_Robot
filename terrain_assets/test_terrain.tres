@@ -1,6 +1,6 @@
 [gd_resource type="Terrain3DAssets" format=3 uid="uid://been751nnum1e"]
 
-[ext_resource type="PackedScene" uid="uid://umkeauif0egh" path="res://assets/3dmodels/grass_foliage.tscn" id="1_7lx7m"]
+[ext_resource type="PackedScene" uid="uid://fo4eop8rlpdb" path="res://assets/3dmodels/grass_medium_02.glb" id="1_7lx7m"]
 [ext_resource type="Texture2D" uid="uid://qgh5ew5eoj75" path="res://assets/3dtextures/Poliigon_GrassPatchyGround_4585/1K/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="2_x872x"]
 [ext_resource type="Texture2D" uid="uid://4037jn4tv04h" path="res://assets/3dtextures/Poliigon_GrassPatchyGround_4585/1K/Poliigon_GrassPatchyGround_4585_Normal.png" id="3_aahas"]
 
