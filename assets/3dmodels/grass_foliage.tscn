@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://umkeauif0egh"]
+
+[ext_resource type="PackedScene" uid="uid://cipjx1aipixex" path="res://assets/3dmodels/grass_medium_01_1k.glb" id="1_5k7ge"]
+
+[node name="grass_medium_01_1k" unique_id=1722172795 instance=ExtResource("1_5k7ge")]
