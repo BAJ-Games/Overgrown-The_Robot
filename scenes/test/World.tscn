@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bkv0yklx170en"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/brackeys-proto-controller/proto_controller/proto_controller.tscn" id="1_11uei"]
+[ext_resource type="Terrain3DAssets" uid="uid://been751nnum1e" path="res://terrain_assets/test_terrain.tres" id="1_ldkou"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ldkou"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_klkld"]
+sky_material = SubResource("ProceduralSkyMaterial_ldkou")
+
+[sub_resource type="Environment" id="Environment_4oqn7"]
+background_mode = 2
+sky = SubResource("Sky_klkld")
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_ldkou"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": null,
+&"depth_blur": null,
+&"distant_normal_scale": null,
+&"flat_terrain_normals": null,
+&"general_uniforms": null,
+&"ground_level": null,
+&"mipmap_bias": null,
+&"mipmaps": null,
+&"private": null,
+&"region_blend": null
+}
+
+[node name="World" type="Node3D" unique_id=94140911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.681561, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1274034884]
+environment = SubResource("Environment_4oqn7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1370068210]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=85146133]
+data_directory = "res://terrain_data"
+material = SubResource("Terrain3DMaterial_ldkou")
+assets = ExtResource("1_ldkou")
+displacement_sharpness = 0.5
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="ProtoController" parent="." unique_id=183421226 instance=ExtResource("1_11uei")]
