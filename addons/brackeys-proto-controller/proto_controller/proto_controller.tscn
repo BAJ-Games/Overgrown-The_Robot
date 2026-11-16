@@ -13,20 +13,21 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
-[node name="ProtoController" type="CharacterBody3D" unique_id=360955327]
+[node name="ProtoController" type="CharacterBody3D" unique_id=1271265170]
 script = ExtResource("1_caisl")
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=887862875]
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1757733342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 material_override = SubResource("StandardMaterial3D_iof21")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ucva2")
 
-[node name="Collider" type="CollisionShape3D" parent="." unique_id=346941461]
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=763736924]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_iof21")
 
-[node name="Head" type="Node3D" parent="." unique_id=1010441432]
+[node name="Head" type="Node3D" parent="." unique_id=1454548812]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1936133787]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=325395371]
+fov = 70.0

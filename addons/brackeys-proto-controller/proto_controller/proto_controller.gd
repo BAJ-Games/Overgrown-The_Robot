@@ -12,9 +12,9 @@ extends CharacterBody3D
 ## Can we press to jump?
 @export var can_jump : bool = true
 ## Can we hold to run?
-@export var can_sprint : bool = false
+@export var can_sprint : bool = true
 ## Can we press to enter freefly mode (noclip)?
-@export var can_freefly : bool = false
+@export var can_freefly : bool = true
 
 @export_group("Speeds")
 ## Look around rotation speed.
@@ -22,9 +22,11 @@ extends CharacterBody3D
 ## Normal speed.
 @export var base_speed : float = 7.0
 ## Speed of jump.
-@export var jump_velocity : float = 4.5
+@export var jump_velocity : float = 7
 ## How fast do we run?
 @export var sprint_speed : float = 10.0
+## How fast do we run?
+@export var back_sprint_speed : float = 10.0
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
@@ -38,13 +40,15 @@ extends CharacterBody3D
 ## Name of Input Action to move Backward.
 @export var input_back : String = "ui_down"
 ## Name of Input Action to Jump.
-@export var input_jump : String = "ui_accept"
+@export var input_jump : String = "jump"
 ## Name of Input Action to Sprint.
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+@export var controller_sensitivity: float = 2.5
+@export var controller_deadzone: float = 0.18
 
-var mouse_captured : bool = false
+var mouse_captured : bool = true
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
@@ -53,8 +57,31 @@ var freeflying : bool = false
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 
+func _process(delta: float) -> void:
+	var look_x: float = Input.get_joy_axis(
+		0, JOY_AXIS_RIGHT_X
+
+		)
+	var look_y: float = Input.get_joy_axis(
+		0, JOY_AXIS_RIGHT_Y
+	)
+
+	if abs(look_x) > controller_deadzone:
+		rotate_y(-look_x * controller_sensitivity * delta)
+
+	if abs(look_y) > controller_deadzone:
+		head.rotation.x -= (
+			look_y * controller_sensitivity * delta
+			)
+		head.rotation.x = clamp(
+			head.rotation.x,
+			deg_to_rad(-85),
+			deg_to_rad(85)
+			)
+
 func _ready() -> void:
 	check_input_mappings()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 
@@ -88,7 +115,7 @@ func _physics_process(delta: float) -> void:
 	# Apply gravity to velocity
 	if has_gravity:
 		if not is_on_floor():
-			velocity += get_gravity() * delta
+			velocity += get_gravity() * delta * 1.75
 
 	# Apply jumping
 	if can_jump:
@@ -101,10 +128,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		move_speed = base_speed
 
+	if Input.is_action_pressed(input_back) and Input.is_action_pressed(input_sprint):
+		move_speed = back_sprint_speed
+
 	# Apply desired movement to velocity
 	if can_move:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
-		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if input_dir.y > 0:
+			input_dir.y *= 0.5
+		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y))
 		if move_dir:
 			velocity.x = move_dir.x * move_speed
 			velocity.z = move_dir.z * move_speed
