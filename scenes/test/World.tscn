@@ -48,3 +48,4 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_11uei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6655884, -0.01076889)
