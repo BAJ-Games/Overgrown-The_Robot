@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/brackeys-proto-controller/proto_controller/proto_controller.tscn" id="1_11uei"]
 [ext_resource type="Terrain3DAssets" uid="uid://been751nnum1e" path="res://terrain_assets/test_terrain.tres" id="1_ldkou"]
+[ext_resource type="Texture2D" uid="uid://d0ao3uf2r1wcb" path="res://assets/3dtextures/StoneBricksSplitface001/StoneBricksSplitface001_COL_1K.jpg" id="3_klkld"]
+[ext_resource type="Texture2D" uid="uid://csbvyh3xvw5am" path="res://assets/3dtextures/StoneBricksSplitface001/StoneBricksSplitface001_NRM_1K.jpg" id="4_4oqn7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ldkou"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,6 +31,11 @@ _shader_parameters = {
 &"region_blend": null
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4oqn7"]
+albedo_texture = ExtResource("3_klkld")
+roughness_texture = ExtResource("4_4oqn7")
+uv1_triplanar = true
+
 [node name="World" type="Node3D" unique_id=94140911]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.681561, 0)
 
@@ -49,3 +56,9 @@ metadata/_edit_lock_ = true
 
 [node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_11uei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6655884, -0.01076889)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1320376276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.241937, -1.6105957, -2.3334186)
+use_collision = true
+size = Vector3(0.23034668, 4.2211914, 20.099762)
+material = SubResource("StandardMaterial3D_4oqn7")
