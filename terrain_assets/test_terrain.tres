@@ -11,6 +11,7 @@ density = 5.0
 last_lod = 5
 last_shadow_lod = 5
 lod0_range = 10.0
+lod1_range = 40.0
 lod2_range = 70.0
 lod3_range = 130.0
 lod4_range = 140.0
