@@ -4,6 +4,7 @@
 [ext_resource type="Terrain3DAssets" uid="uid://been751nnum1e" path="res://terrain_assets/test_terrain.tres" id="1_ldkou"]
 [ext_resource type="Texture2D" uid="uid://d0ao3uf2r1wcb" path="res://assets/3dtextures/StoneBricksSplitface001/StoneBricksSplitface001_COL_1K.jpg" id="3_klkld"]
 [ext_resource type="Texture2D" uid="uid://csbvyh3xvw5am" path="res://assets/3dtextures/StoneBricksSplitface001/StoneBricksSplitface001_NRM_1K.jpg" id="4_4oqn7"]
+[ext_resource type="PackedScene" uid="uid://cc414j1rwf34m" path="res://assets/3dmodels/wooden_picnic_table_1k.glb" id="5_k2ny3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ldkou"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -36,6 +37,9 @@ albedo_texture = ExtResource("3_klkld")
 roughness_texture = ExtResource("4_4oqn7")
 uv1_triplanar = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhfpc"]
+size = Vector3(2.2478027, 0.7703247, 3.0490723)
+
 [node name="World" type="Node3D" unique_id=94140911]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.681561, 0)
 
@@ -62,3 +66,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.241937, -1.6105957, -2.333
 use_collision = true
 size = Vector3(0.23034668, 4.2211914, 20.099762)
 material = SubResource("StandardMaterial3D_4oqn7")
+
+[node name="Picnic Table" type="StaticBody3D" parent="." unique_id=1442431810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5516996, -1.7581749, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Picnic Table" unique_id=909442863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018920898, 0.4067688, 0.002319336)
+shape = SubResource("BoxShape3D_hhfpc")
+
+[node name="wooden_picnic_table_1k" parent="Picnic Table" unique_id=1694476440 instance=ExtResource("5_k2ny3")]
