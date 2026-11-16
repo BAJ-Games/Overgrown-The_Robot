@@ -7,9 +7,14 @@
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_7lx7m"]
 name = "grass_foliage"
 scene_file = ExtResource("1_7lx7m")
-density = 10.0
+density = 5.0
 last_lod = 5
 last_shadow_lod = 5
+lod0_range = 10.0
+lod2_range = 70.0
+lod3_range = 130.0
+lod4_range = 140.0
+lod5_range = 150.0
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_8mq3d"]
 name = "Poliigon_GrassPatchyGround_4585_BaseColor"
