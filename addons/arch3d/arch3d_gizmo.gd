@@ -1,7 +1,7 @@
 @tool
 extends EditorNode3DGizmoPlugin
 
-const Arch3D = preload("res://script/tool/arch3d.gd")
+const Arch3D = preload("res://addons/arch3d/arch3d.gd")
 
 const HANDLE_WIDTH := 0
 const HANDLE_HEIGHT := 1
