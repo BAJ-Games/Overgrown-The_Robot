@@ -246,6 +246,7 @@ func _generate_arch():
 
 	# Glatte Normalen für den Bogen erzeugen
 	surface_tool.generate_normals()
+	surface_tool.set_smooth_group(0)
 
 	mesh_data = surface_tool.commit()
 
@@ -254,24 +255,21 @@ func _generate_arch():
 	# MATERIAL
 	# =================================================
 
+	var material = StandardMaterial3D.new()
+
+	material.albedo_color = Color.WHITE
+	material.metallic = 0.0
+	material.roughness = 0.85
+
+	# Beide Seiten der Flächen anzeigen
+	material.cull_mode = BaseMaterial3D.CULL_DISABLED
+
+	# Textur nur verwenden, wenn eine vorhanden ist
 	if texture != null:
-
-		var material = StandardMaterial3D.new()
-
 		material.albedo_texture = texture
-		material.albedo_color = Color.WHITE
-
-		material.metallic = 0.0
-		material.roughness = 0.85
-
-		# Textur darf sich wiederholen
 		material.texture_repeat = true
-		material.cull_mode = BaseMaterial3D.CULL_DISABLED
 
-		mesh_data.surface_set_material(
-			0,
-			material
-		)
+	mesh_data.surface_set_material(0, material)
 
 
 	mesh = mesh_data
@@ -293,22 +291,22 @@ func _add_box(
 	vertices: PackedVector3Array,
 	indices: PackedInt32Array,
 	uvs: PackedVector2Array,
-	position: Vector3,
+	box_position: Vector3,
 	size: Vector3
 ):
 	# Jede Fläche bekommt eigene Vertices.
 	# Dadurch können Vorderseite, Rückseite und Seiten
 	# unabhängig voneinander texturiert werden.
 
-	var p0 = position
-	var p1 = position + Vector3(size.x, 0, 0)
-	var p2 = position + Vector3(size.x, size.y, 0)
-	var p3 = position + Vector3(0, size.y, 0)
+	var p0 = box_position
+	var p1 = box_position + Vector3(size.x, 0, 0)
+	var p2 = box_position + Vector3(size.x, size.y, 0)
+	var p3 = box_position + Vector3(0, size.y, 0)
 
-	var p4 = position + Vector3(0, 0, size.z)
-	var p5 = position + Vector3(size.x, 0, size.z)
-	var p6 = position + Vector3(size.x, size.y, size.z)
-	var p7 = position + Vector3(0, size.y, size.z)
+	var p4 = box_position + Vector3(0, 0, size.z)
+	var p5 = box_position + Vector3(size.x, 0, size.z)
+	var p6 = box_position + Vector3(size.x, size.y, size.z)
+	var p7 = box_position + Vector3(0, size.y, size.z)
 
 
 	# =================================================
@@ -626,12 +624,12 @@ func _add_arch_segment(
 	))
 
 	indices.append(start + 0)
-	indices.append(start + 1)
 	indices.append(start + 2)
+	indices.append(start + 1)
 
 	indices.append(start + 0)
-	indices.append(start + 2)
 	indices.append(start + 3)
+	indices.append(start + 2)
 
 
 	# =================================================
@@ -674,6 +672,8 @@ func _add_arch_segment(
 	indices.append(start + 0)
 	indices.append(start + 2)
 	indices.append(start + 3)
+
+
 
 # =================================================
 # COLLISION
