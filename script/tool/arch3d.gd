@@ -233,6 +233,10 @@ func _generate_arch():
 	# SurfaceTool für korrekte Normalen
 	# -------------------------------------------------
 
+	# -------------------------------------------------
+	# SurfaceTool für korrekte Normalen
+	# -------------------------------------------------
+
 	var surface_tool = SurfaceTool.new()
 
 	surface_tool.create_from_arrays(
@@ -240,6 +244,7 @@ func _generate_arch():
 		Mesh.PRIMITIVE_TRIANGLES
 	)
 
+	# Glatte Normalen für den Bogen erzeugen
 	surface_tool.generate_normals()
 
 	mesh_data = surface_tool.commit()
@@ -261,6 +266,7 @@ func _generate_arch():
 
 		# Textur darf sich wiederholen
 		material.texture_repeat = true
+		material.cull_mode = BaseMaterial3D.CULL_DISABLED
 
 		mesh_data.surface_set_material(
 			0,
@@ -659,128 +665,6 @@ func _add_arch_segment(
 	uvs.append(Vector2(
 		arc1 / texture_scale,
 		segment_depth / texture_scale
-	))
-
-	indices.append(start + 0)
-	indices.append(start + 1)
-	indices.append(start + 2)
-
-	indices.append(start + 0)
-	indices.append(start + 2)
-	indices.append(start + 3)
-
-
-	# =================================================
-	# LINKES SEGMENTENDE
-	# =================================================
-	# Nur beim allerersten Segment erzeugen!
-	# Zwischen den anderen Segmenten darf hier KEINE
-	# Fläche liegen.
-
-	if is_zero_approx(angle1):
-
-		start = vertices.size()
-
-		vertices.append(inner1)
-		vertices.append(outer1)
-		vertices.append(outer1_back)
-		vertices.append(inner1_back)
-
-		uvs.append(Vector2(
-			0.0,
-			0.0
-		))
-
-		uvs.append(Vector2(
-			radial_size / texture_scale,
-			0.0
-		))
-
-		uvs.append(Vector2(
-			radial_size / texture_scale,
-			segment_depth / texture_scale
-		))
-
-		uvs.append(Vector2(
-			0.0,
-			segment_depth / texture_scale
-		))
-
-		indices.append(start + 0)
-		indices.append(start + 1)
-		indices.append(start + 2)
-
-		indices.append(start + 0)
-		indices.append(start + 2)
-		indices.append(start + 3)
-
-
-	# =================================================
-	# RECHTES SEGMENTENDE
-	# =================================================
-	# Nur beim allerletzten Segment erzeugen!
-
-	if is_equal_approx(angle2, PI):
-
-		start = vertices.size()
-
-		vertices.append(inner2)
-		vertices.append(inner2_back)
-		vertices.append(outer2_back)
-		vertices.append(outer2)
-
-		uvs.append(Vector2(
-			0.0,
-			0.0
-		))
-
-		uvs.append(Vector2(
-			0.0,
-			segment_depth / texture_scale
-		))
-
-		uvs.append(Vector2(
-			radial_size / texture_scale,
-			segment_depth / texture_scale
-		))
-
-		uvs.append(Vector2(
-			radial_size / texture_scale,
-			0.0
-		))
-
-		indices.append(start + 0)
-		indices.append(start + 1)
-		indices.append(start + 2)
-
-		indices.append(start + 0)
-		indices.append(start + 2)
-		indices.append(start + 3)
-
-
-	# =================================================
-	# RECHTES SEGMENTENDE
-	# =================================================
-
-	start = vertices.size()
-
-	vertices.append(inner2)
-	vertices.append(inner2_back)
-	vertices.append(outer2_back)
-	vertices.append(outer2)
-
-	uvs.append(Vector2(0.0, 0.0))
-	uvs.append(Vector2(
-		0.0,
-		segment_depth / texture_scale
-	))
-	uvs.append(Vector2(
-		radial_size / texture_scale,
-		segment_depth / texture_scale
-	))
-	uvs.append(Vector2(
-		radial_size / texture_scale,
-		0.0
 	))
 
 	indices.append(start + 0)
