@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d0ao3uf2r1wcb" path="res://assets/3dtextures/StoneBricksSplitface001/StoneBricksSplitface001_COL_1K.jpg" id="3_klkld"]
 [ext_resource type="Texture2D" uid="uid://csbvyh3xvw5am" path="res://assets/3dtextures/StoneBricksSplitface001/StoneBricksSplitface001_NRM_1K.jpg" id="4_4oqn7"]
 [ext_resource type="PackedScene" uid="uid://cc414j1rwf34m" path="res://assets/3dmodels/wooden_picnic_table_1k.glb" id="5_k2ny3"]
+[ext_resource type="PackedScene" uid="uid://11b2k68gw5r7" path="res://assets/3dmodels/large_castle_door_1k.glb" id="6_8mq3d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ldkou"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -32,13 +33,13 @@ _shader_parameters = {
 &"region_blend": null
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhfpc"]
+size = Vector3(2.2478027, 0.7703247, 3.0490723)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4oqn7"]
 albedo_texture = ExtResource("3_klkld")
 roughness_texture = ExtResource("4_4oqn7")
 uv1_triplanar = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hhfpc"]
-size = Vector3(2.2478027, 0.7703247, 3.0490723)
 
 [node name="World" type="Node3D" unique_id=94140911]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.681561, 0)
@@ -61,12 +62,6 @@ metadata/_edit_lock_ = true
 [node name="ProtoController" parent="." unique_id=1271265170 instance=ExtResource("1_11uei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6655884, -0.01076889)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1320376276]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.241937, -1.6105957, -2.3334186)
-use_collision = true
-size = Vector3(0.23034668, 4.2211914, 20.099762)
-material = SubResource("StandardMaterial3D_4oqn7")
-
 [node name="Picnic Table" type="StaticBody3D" parent="." unique_id=1442431810]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5516996, -1.7581749, 0)
 
@@ -75,3 +70,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018920898, 0.4067688, 0.002
 shape = SubResource("BoxShape3D_hhfpc")
 
 [node name="wooden_picnic_table_1k" parent="Picnic Table" unique_id=1694476440 instance=ExtResource("5_k2ny3")]
+
+[node name="Wall" type="CSGCombiner3D" parent="." unique_id=486140990]
+use_collision = true
+
+[node name="StoneWall1" type="CSGBox3D" parent="Wall" unique_id=1320376276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.241937, -1.6105957, -8.284831)
+use_collision = true
+size = Vector3(0.23034668, 4.2211914, 8.196938)
+material = SubResource("StandardMaterial3D_4oqn7")
+
+[node name="StoneWall2" type="CSGBox3D" parent="Wall" unique_id=685594951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.241937, -1.6105957, 2.7668421)
+use_collision = true
+size = Vector3(0.23034668, 4.2211914, 9.8992405)
+material = SubResource("StandardMaterial3D_4oqn7")
+
+[node name="StoneWall3" type="CSGBox3D" parent="Wall" unique_id=1510022554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.241937, 0.00894165, -3.1843047)
+use_collision = true
+size = Vector3(0.23034668, 0.9821167, 2.004178)
+material = SubResource("StandardMaterial3D_4oqn7")
+
+[node name="large_castle_door_1k" parent="Wall" unique_id=409243750 instance=ExtResource("6_8mq3d")]
+transform = Transform3D(-0.028294174, 0, 0.99959975, 0, 1, 0, -0.99959975, 0, -0.028294174, -4.224331, -3.416536, -3.2348468)
