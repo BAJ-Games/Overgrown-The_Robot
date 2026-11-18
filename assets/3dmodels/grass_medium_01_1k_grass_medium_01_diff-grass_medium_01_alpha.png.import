@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh42j42a5cbnn"
 path.s3tc="res://.godot/imported/grass_medium_01_1k_grass_medium_01_diff-grass_medium_01_alpha.png-432893d8100699f10820d46b0621f64c.s3tc.ctex"
+path.etc2="res://.godot/imported/grass_medium_01_1k_grass_medium_01_diff-grass_medium_01_alpha.png-432893d8100699f10820d46b0621f64c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/3dmodels/grass_medium_01_1k_grass_medium_01_diff-grass_medium_01_alpha.png"
-dest_files=["res://.godot/imported/grass_medium_01_1k_grass_medium_01_diff-grass_medium_01_alpha.png-432893d8100699f10820d46b0621f64c.s3tc.ctex"]
+dest_files=["res://.godot/imported/grass_medium_01_1k_grass_medium_01_diff-grass_medium_01_alpha.png-432893d8100699f10820d46b0621f64c.s3tc.ctex", "res://.godot/imported/grass_medium_01_1k_grass_medium_01_diff-grass_medium_01_alpha.png-432893d8100699f10820d46b0621f64c.etc2.ctex"]
 
 [params]
 
