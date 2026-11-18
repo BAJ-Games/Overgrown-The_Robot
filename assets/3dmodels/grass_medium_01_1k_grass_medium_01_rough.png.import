@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://45v2oi4qsttt"
 path.s3tc="res://.godot/imported/grass_medium_01_1k_grass_medium_01_rough.png-559967f8d875208e0f57f073353ae06e.s3tc.ctex"
+path.etc2="res://.godot/imported/grass_medium_01_1k_grass_medium_01_rough.png-559967f8d875208e0f57f073353ae06e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/3dmodels/grass_medium_01_1k_grass_medium_01_rough.png"
-dest_files=["res://.godot/imported/grass_medium_01_1k_grass_medium_01_rough.png-559967f8d875208e0f57f073353ae06e.s3tc.ctex"]
+dest_files=["res://.godot/imported/grass_medium_01_1k_grass_medium_01_rough.png-559967f8d875208e0f57f073353ae06e.s3tc.ctex", "res://.godot/imported/grass_medium_01_1k_grass_medium_01_rough.png-559967f8d875208e0f57f073353ae06e.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck6b7l7d76gh5"
 path.s3tc="res://.godot/imported/large_castle_door_1k_large_castle_door_nor_gl.png-a8a1bc2ad8e3004f7c3ee38579909053.s3tc.ctex"
+path.etc2="res://.godot/imported/large_castle_door_1k_large_castle_door_nor_gl.png-a8a1bc2ad8e3004f7c3ee38579909053.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/3dmodels/large_castle_door_1k_large_castle_door_nor_gl.png"
-dest_files=["res://.godot/imported/large_castle_door_1k_large_castle_door_nor_gl.png-a8a1bc2ad8e3004f7c3ee38579909053.s3tc.ctex"]
+dest_files=["res://.godot/imported/large_castle_door_1k_large_castle_door_nor_gl.png-a8a1bc2ad8e3004f7c3ee38579909053.s3tc.ctex", "res://.godot/imported/large_castle_door_1k_large_castle_door_nor_gl.png-a8a1bc2ad8e3004f7c3ee38579909053.etc2.ctex"]
 
 [params]
 

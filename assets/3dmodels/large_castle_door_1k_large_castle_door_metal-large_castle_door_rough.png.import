@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cao7yo475uke4"
 path.s3tc="res://.godot/imported/large_castle_door_1k_large_castle_door_metal-large_castle_door_rough.png-a5f420f2874f81ed4b9539774dd91c56.s3tc.ctex"
+path.etc2="res://.godot/imported/large_castle_door_1k_large_castle_door_metal-large_castle_door_rough.png-a5f420f2874f81ed4b9539774dd91c56.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/3dmodels/large_castle_door_1k_large_castle_door_metal-large_castle_door_rough.png"
-dest_files=["res://.godot/imported/large_castle_door_1k_large_castle_door_metal-large_castle_door_rough.png-a5f420f2874f81ed4b9539774dd91c56.s3tc.ctex"]
+dest_files=["res://.godot/imported/large_castle_door_1k_large_castle_door_metal-large_castle_door_rough.png-a5f420f2874f81ed4b9539774dd91c56.s3tc.ctex", "res://.godot/imported/large_castle_door_1k_large_castle_door_metal-large_castle_door_rough.png-a5f420f2874f81ed4b9539774dd91c56.etc2.ctex"]
 
 [params]
 
