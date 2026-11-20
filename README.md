@@ -35,7 +35,7 @@ We dont't want to say TOO much about the game by now, but it will be great.
 
 ***All contributors***
 - [Benjamin-306](https://github.com/Benjamin-306)
-- [Jaka](https://github.com/jakobpfaff92-tech)
+- [Jaka-306](https://github.com/Jaka-306)
 </details>
 
 # HOW TO PLAY
@@ -48,7 +48,7 @@ We dont't want to say TOO much about the game by now, but it will be great.
 - **BAJ-Games site:** [baj-games.pages.dev](https://baj-games.pages.dev/)
 - **Overgrown - The Robot:** [overgrowntherobot.netlify.app](https://overgrowntherobot.netlify.app/)
 
-***Windows***
+***Windows:***
 - **Installer/Zip-Package including Installer:** [Releases](https://github.com/BAJ-Games/Overgrown-The_Robot/releases)
-- **Self export in Godot** (Only for non commercial use)
+- **Self export in Godot** _(Only for non commercial use)_
 </details>
