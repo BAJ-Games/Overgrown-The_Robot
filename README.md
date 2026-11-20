@@ -46,7 +46,7 @@ We dont't want to say TOO much about the game by now, but it will be great.
 
 ***Web:***
 - **BAJ-Games site:** [baj-games.pages.dev](https://baj-games.pages.dev/)
-- **Overgrown - The Robot:** [overgrowntherobot.netlify.app](https://overgrowntherobot.netlify.app/)
+- **Overgrown - The Robot:** [overgrowntherobot.netlify.app](https://overgrowntherobot.netlify.app/) _(Note: Save system does and probably will never work in web edition)_
 
 ***Windows:***
 - **Installer/Zip-Package including Installer:** [Releases](https://github.com/BAJ-Games/Overgrown-The_Robot/releases)
