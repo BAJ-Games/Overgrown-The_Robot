@@ -1,3 +1,5 @@
+BAJ-Games private License
+
 # License
 
 Copyright (c) 2026 Benjamin (Benjamin-306) / BAJ-Games. All Rights Reserved.
