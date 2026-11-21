@@ -31,15 +31,29 @@ Any unauthorized, illegitimate, or unjustified attempt to claim ownership or adm
 
 ## Third-Party Software & Assets
 
-This project is built using the **Godot Engine** and third-party addons/plugins (such as Terrain 3D), which are governed by their own respective open-source licenses (e.g., MIT License).
+This project is built using third-party open-source software and plugins. When distributing compiled builds (such as Windows releases), the following copyright and license notices apply:
 
+### 1. Godot Engine & Addons (MIT License)
+- **Godot Engine** — Copyright (c) 2014-present Godot Engine contributors; Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+- **Terrain 3D** — Copyright (c) 2023-present Tokisan Games (Cory Petkovsek).
+- **Arch3D** — Copyright (c) its respective authors/contributors (see `addons/` folder for individual license files).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*(Note: Official Godot export templates also include third-party components such as FreeType, ENet, and Mbed TLS. Full engine component notices are available at https://godotengine.org/license/.)*
+
+### 2. Third-Party 3D & Texture Assets
 Additionally, this project contains third-party assets obtained from external websites and services, including:
-- https://polyhaven.com/
-- https://www.poliigon.com/
-- https://ambientcg.com/
-- https://3dvalley.com/
+- https://polyhaven.com (CC0)
+- https://poliigon.com (Poliigon Asset License)
+- https://ambientcg.com (CC0)
+- https://3dvalley.com (CC0)
 
-These third-party components and assets are not owned by BAJ-Games and remain subject to their respective authors' copyrights, licenses, and terms of use. Their inclusion in this project does not grant ownership or additional rights beyond those permitted by their original licenses.
+These third-party assets are not owned by BAJ-Games and remain subject to their respective authors' copyrights, licenses, and terms of use. Their inclusion in this project does not grant ownership or additional rights beyond those permitted by their original licenses.
 
 ## Disclaimer of Warranty & Limitation of Liability
 
