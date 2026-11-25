@@ -14,19 +14,23 @@ grow_vertical = 2
 script = ExtResource("1_n2us8")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1608843543]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_rn26n")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="." unique_id=1837207085]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.33024693
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.33024693
 offset_left = -105.5
 offset_top = -38.0
 offset_right = 105.5
@@ -37,14 +41,15 @@ theme = ExtResource("3_weeot")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 text = "Default"
+metadata/_edit_use_anchors_ = true
 
 [node name="Question" type="Label" parent="." unique_id=1702574027]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.33024693
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.33024693
 offset_left = -240.0
 offset_top = 44.0
 offset_right = 248.0
@@ -57,6 +62,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Do you really want to use this username?"
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Yes" type="Button" parent="." unique_id=2095881267]
 layout_mode = 0
@@ -66,6 +72,7 @@ offset_right = 448.0
 offset_bottom = 596.0
 theme = ExtResource("3_weeot")
 text = "Yes"
+metadata/_edit_use_anchors_ = true
 
 [node name="No" type="Button" parent="." unique_id=1090883091]
 layout_mode = 0
@@ -75,6 +82,7 @@ offset_right = 832.0
 offset_bottom = 596.0
 theme = ExtResource("3_weeot")
 text = "No"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="No" to="." method="_on_no_pressed"]
